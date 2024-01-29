@@ -2,6 +2,7 @@
 
 * Студент: [Максим Колесников](https://up.htmlacademy.ru/htmlcss/39/user/2444393).
 * Наставник: [Екатерина Комнатная](https://htmlacademy.ru/profile/id215761).
+* Сайт: [Проект "Седона" Максим Колесников](https://tilz88.github.io/2444393-sedona-39/)
 
 ---
 
