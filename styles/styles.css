@@ -74,13 +74,13 @@ body {
 }
 
 .navigation-list {
-  width: 339px;
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
   align-items: center;
   list-style: none;
+  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .navigation-link {
@@ -89,6 +89,7 @@ body {
   line-height: 24px;
   text-decoration: none;
   color: #000000;
+  padding: 20px 16px;
 }
 
 .navigation-link-current {
@@ -101,38 +102,39 @@ body {
 }
 
 .navigation-user {
-  width: 88px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-left: auto;
+  flex-wrap: wrap;
 }
 
 .navigation-user-item {
   margin: 0;
 }
 
-.navigator-search {
-  background-image: url(../images/icons/search-icon.svg);
+.navigation-user-link {
+  width: 44px;
+  height: 64px;
+  background-position: center;
   background-repeat: no-repeat;
   display: block;
-  width: 20px;
-  height: 20px;
+}
+
+.navigator-search {
+  background-image: url(../images/icons/search-icon.svg);
 }
 
 .navigator-favorites {
   background-image: url(../images/icons/favorite-icon.svg);
-  background-repeat: no-repeat;
-  display: block;
-  width: 20px;
-  height: 20px;
   text-decoration: none;
 }
 
 .favorites-number {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px 5px 5px 4px;
   border-radius: 10px;
   background: #7DB54F;
   text-align: center;
@@ -140,8 +142,8 @@ body {
   line-height: 10px;
   color: #ffffff;
   position: relative;
-  bottom: 12px;
-  left: 10px;
+  top: 11px;
+  left: 20px;
 }
 
 .navigation-button {
@@ -181,7 +183,7 @@ body {
 }
 
 .advantages-title-block {
-  padding: 69px 0;
+  padding: 69px 274px;
 }
 
 .title {
@@ -194,8 +196,6 @@ body {
 }
 
 .title-advantages-padding {
-  padding-left: 290px;
-  padding-right: 290px;
   margin-bottom: 25px;
 }
 
@@ -220,26 +220,22 @@ body {
   display: flex;
 }
 
+.advantages-high:nth-child(8n+5){
+  flex-direction: row-reverse;
+}
+
 .advantages-photo {
   background-size: cover;
 }
 
-.advantages-high-reverse {
-  background-color: #82B3D3;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .advantages-medium {
-  width: 400px;
+  max-width: 400px;
   background-color: #83B3D31F;
   padding: 113px 85px;
 }
 
-.advantages-low {
-  width: 400px;
+.advantages-medium:nth-child(4n+3) {
   background-color: #83B3D333;
-  padding: 113px 85px;
 }
 
 .advantages-title {
@@ -268,8 +264,6 @@ body {
   background-color: rgba(0, 0, 0, 0.30);
 }
 
-
-
 .advantages-description {
   text-align: center;
   margin: 0;
@@ -277,7 +271,7 @@ body {
 }
 
 .infrastructure-title-block {
-  padding: 64px 0;
+  padding: 64px 348px;
 }
 
 .title-infrastructure-padding {
@@ -288,10 +282,12 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .infrastructure-item {
-  width: 400px;
+  max-width: 400px;
+  min-height: 385px;
   list-style-type: none;
   text-align: center;
   padding: 81px 85px;
@@ -299,7 +295,7 @@ body {
   background-position: center 82px;
 }
 
-.infrastructure-high {
+.infrastructure-item:nth-child(odd) {
   background-color: #83B3D31F;
 }
 
@@ -329,7 +325,7 @@ body {
 }
 
 .search {
-  padding: 96px 0;
+  padding: 96px 304px;
   text-align: center;
 }
 
@@ -339,7 +335,7 @@ body {
 
 .title-description-search-margin {
   margin-bottom: 54px;
-  padding: 0 304px;
+  padding: 0;
 }
 
 .search-button {
@@ -435,14 +431,9 @@ body {
 .social-list {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0;
-}
-
-.social-list-item {
-  width: 47px;
-  align-self: center;
-  text-align: center;
 }
 
 .social-button {
@@ -501,6 +492,7 @@ body {
 .breadcrumbs {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
@@ -716,11 +708,10 @@ body {
 }
 
 .hotel-card-item {
-  width: 340px;
+  max-width: 340px;
   border-radius: 4px;
-  border: 1px solid #E6E6E6;
   padding: 20px;
-  box-sizing: border-box;
+  box-shadow: 0 0 0 1px #E6E6E6;
 }
 
 .hotel-info-link {
@@ -839,19 +830,12 @@ body {
   display: flex;
   margin: 40px 0 60px 0;
   padding: 0;
-}
-
-.pagination-item {
-  margin-right: 8px;
-}
-
-.pagination-item:last-child {
-  margin-right: 0;
+  gap: 8px;
 }
 
 .pagination-link {
-  width: 60px;
-  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
