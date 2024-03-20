@@ -85,6 +85,7 @@ body {
 }
 
 .navigation-list {
+  max-width: 624px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -203,7 +204,7 @@ body {
   background-color: #756157;
   border-radius: 4px;
   text-align: center;
-  padding: 8px 0;
+  padding: 8px;
 }
 
 .navigation-button:hover {
@@ -319,7 +320,7 @@ body {
 .advantage-border::after {
   position: absolute;
   content: " ";
-  top: 86px;
+  bottom: -32px;
   left: 85px;
   width: 60px;
   height: 2px;
@@ -416,7 +417,7 @@ body {
 }
 
 .title-description-search-margin {
-  margin-bottom: 54px;
+  margin-bottom: 53px;
   padding: 0;
 }
 
@@ -435,7 +436,7 @@ body {
   border-radius: 4px;
   text-align: center;
   border: none;
-  padding: 0;
+  padding: 8px;
   cursor: pointer;
 }
 
@@ -463,7 +464,7 @@ body {
   background-color: #82B3D3;
   text-align: center;
   margin: 0;
-  padding: 96px 0 104px 0;
+  padding: 96px 40px 104px 40px;
 }
 
 .subscribe-mailing {
@@ -471,7 +472,7 @@ body {
   font-weight: 700;
   line-height: 36px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   text-transform: uppercase;
   text-align: center;
   color: #FFFFFF;
@@ -479,7 +480,7 @@ body {
 
 .title-description-mailing {
   margin: 0;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
   padding: 0 258px;
   font-size: 22px;
   line-height: 26px;
@@ -554,6 +555,7 @@ body {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  max-width: 150px;
 }
 
 .social-button {
@@ -605,6 +607,7 @@ body {
   line-height: 40px;
   text-decoration: none;
   color: #000000;
+  max-width: 720px;
 }
 
 .phone-link:hover {
@@ -1031,7 +1034,7 @@ body {
   line-height: 21px;
   margin: 0;
   margin-right: 70px;
-  padding: 12px 20px;
+  padding: 13px 18px;
   border: 2px solid rgba(229, 229, 229, 1);
   border-radius: 4px;
   width: 100%;
@@ -1061,8 +1064,10 @@ body {
 }
 
 .view-selector-list {
+  max-width: 160px;
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   gap: 8px;
   padding: 0;
@@ -1142,6 +1147,7 @@ body {
 .hotel-info-link:active {
   opacity: 0.5;
 }
+
 .hotel-img {
   vertical-align: bottom;
   margin-bottom: 16px;
@@ -1327,7 +1333,7 @@ body {
   background-color: #ffffff;
   text-align: center;
   margin: 0;
-  padding: 96px 0 104px 0;
+  padding: 96px 40px 104px 40px;
 }
 
 .subscribe-mailing-no-background {
@@ -1420,10 +1426,14 @@ body {
 
 .modal-auth {
   width: 717px;
+  max-height: 576px;
+  overflow: auto;
 }
 
 .modal-title {
   margin: 0;
+  padding-right: 40px;
+  word-wrap: break-word;
   margin-bottom: 64px;
   font-size: 30px;
   line-height: 36px;
@@ -1453,26 +1463,28 @@ body {
 
 .modal-close-button:hover,
 .modal-close-button:focus-visible {
-  background-color: rgba(230, 230, 230, 1);
+  background-color: #E6E6E6;
 }
 
-.modal-close-button:active{
-  opacity: 0.3;
+.modal-close-button:active svg path {
+  fill: rgba(0, 0, 0, 0.3);
 }
 
 .modal-form {
   margin: 0;
   display: grid;
   grid-template-columns: 119px 110px 80px 85px 110px;
-  grid-template-rows: 48px 48px 48px 48px 48px 48px 60px;
   column-gap: 18px;
 }
 
 .form-label {
+  max-width: 200px;
+  display: block;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   align-self: center;
+  word-wrap: break-word;
 }
 
 .field-date-input-wrapper {
@@ -1497,20 +1509,38 @@ body {
 
 .field-date-calendar-svg {
   display: block;
+  padding: 0;
   position: absolute;
-  top: 16px;
-  left: 402px;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 400px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.field-date-calendar-svg svg {
+  fill: rgba(0, 0, 0, 0.3);
+}
+
+.field-date-calendar-svg:hover svg path,
+.field-date-calendar-svg:focus-visible svg path {
+  fill: rgba(0, 0, 0, 1);
+}
+
+.field-date-calendar-svg:active svg path {
   fill: rgba(0, 0, 0, 0.3);
 }
 
 .field-date-input:hover,
 .check-form-people-input:hover {
-  background-color:rgba(230, 230, 230, 1);
+  background-color: rgba(230, 230, 230, 1);
 }
 
 .field-date-input:focus-visible,
 .check-form-people-input:focus-visible {
-  background-color:rgba(230, 230, 230, 1);
+  background-color: rgba(230, 230, 230, 1);
 }
 
 .field-date-input:disabled,
@@ -1528,6 +1558,8 @@ body {
   line-height: 21px;
   margin-left: 20px;
   margin-top: 4px;
+  margin-bottom: 23px;
+  word-wrap: break-word;
 }
 
 .wrong-form-signature {
@@ -1549,13 +1581,16 @@ body {
 
 .appointment-form {
   margin: 0;
-  grid-column: 3 / 5;
+  grid-column: 3 / 6;
   align-self: center;
-  margin-left: 70px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .child-form-label {
-  margin-left: auto;
+  margin: auto auto auto 70px;
+  display: flex;
+  align-items: center;
 }
 
 .check-form-people-input {
@@ -1564,7 +1599,7 @@ body {
   height: 48px;
   border-radius: 4px;
   border: none;
-  padding: 12px 20px;
+  padding: 12px 30px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -1585,40 +1620,57 @@ body {
 }
 
 .form-minus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  left: 13px;
+  left: 10px;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
-  fill: rgba(117, 97, 87, 0.3);
+  border: none;
+  background-color: transparent;
 }
 
 .form-plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  right: 13px;
+  right: 10px;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
+  border: none;
+  background-color: transparent;
+}
+
+.form-minus svg,
+.form-plus svg {
   fill: rgba(117, 97, 87, 0.3);
 }
 
-.form-plus:hover,
-.form-plus:focus-visible {
+.form-plus:hover svg path,
+.form-minus:hover svg path {
   fill: rgba(0, 0, 0, 1);
 }
 
-.form-plus:active {
-  fill: rgba(0, 0, 0, 0.2);
-}
-
-.form-minus:hover,
-.form-minus:focus-visible {
+.form-plus:focus-visible svg path,
+.form-minus:focus-visible svg path {
   fill: rgba(0, 0, 0, 1);
 }
 
-.form-minus:active {
+.form-plus:active svg path,
+.form-minus:active svg path {
   fill: rgba(0, 0, 0, 0.2);
 }
+
 
 .modal-form-button {
   grid-column: 1 / 6;
@@ -1629,10 +1681,12 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   background-color: #82B3D3;
-  padding: 18px 257px;
+  padding: 18px 18px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 48px;
+  word-wrap: break-word;
 }
 
 .modal-form-button:hover {
@@ -1655,7 +1709,6 @@ body {
 
 
 .tooltip {
-  position: absolute;
   margin-left: 10px;
   width: 26px;
   height: 26px;
@@ -1700,14 +1753,18 @@ body {
 }
 
 .tooltip-text::before {
-  content:'';
+  content: '';
   background-image: url("../images/icons/tooltip-arrow.svg");
   width: 19px;
   height: 9px;
   position: absolute;
   bottom: 100%;
-  left:0;
-  right:0;
+  left: 0;
+  right: 0;
   margin-left: auto;
   margin-right: auto;
+}
+
+.modal-container-closer {
+  display: none;
 }
