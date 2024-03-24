@@ -795,12 +795,33 @@ body {
   line-height: 23px;
   color: #ffffff;
   position: relative;
+}
+
+.control-mark,
+.control-mark-radio {
   cursor: pointer;
 }
 
-.control:hover {
+.control-label {
+  cursor: pointer;
+}
+
+.control-mark:hover,
+.control-mark-radio:hover {
   opacity: 0.6;
-  color: rgba(255, 255, 255, 0.6);
+}
+
+.control-label:hover {
+  opacity: 0.6;
+}
+
+.control-mark:active,
+.control-mark-radio:active {
+  opacity: 0.3;
+}
+
+.control-label:active {
+  opacity: 0.3;
 }
 
 .control-input:focus-visible + .control-mark,
@@ -808,10 +829,17 @@ body {
   outline: 3px solid #83b3d3;
 }
 
-.control:active {
+.control-input:disabled + .control-mark,
+.control-input:disabled + .control-mark-radio {
   opacity: 0.3;
-  color: rgba(255, 255, 255, 0.3);
+  cursor: default;
 }
+
+.control-input:disabled ~ .control-label {
+  opacity: 0.3;
+  cursor: default;
+}
+
 
 .control-input {
   margin: 0;
@@ -946,12 +974,12 @@ body {
 }
 
 .range-toggle:hover {
-  outline: 2px solid #82b3d3;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
 }
 
-.range-toggle:active,
-.range-toggle:focus {
-  background-color: #82b3d3;
+.range-toggle:active {
+  border: 2px solid rgba(131, 179, 211, 1);
 }
 
 .toggle-min {
@@ -1314,6 +1342,7 @@ body {
 .pagination {
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   margin: 39px 0 60px 0;
   padding: 0;
   gap: 8px;
@@ -1726,7 +1755,7 @@ body {
 }
 
 .tooltip-toggle:hover + .tooltip-text,
-.tooltip-toggle:focus-vision + .tooltip-text {
+.tooltip-toggle:focus + .tooltip-text {
   display: block;
 }
 
